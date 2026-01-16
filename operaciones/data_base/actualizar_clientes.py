@@ -1,9 +1,9 @@
-def actualizar_clientes(cursor, cliente_id, nuevo_nombre, nueva_cedula ):
+def actualizar_clientes(cursor, cliente_nombre,  nueva_cedula ):
     """Actualiza los datos de un cliente en la base de datos."""    
     cursor.execute(
-        "UPDATE clientes SET nombre = ?, cedula = ? WHERE id = ?",
-        (nuevo_nombre, nueva_cedula, cliente_id)
+        "UPDATE clientes SET  cedula = ? WHERE nombre = ?",
+        ( nueva_cedula, cliente_nombre)
     )
-    print(f"✓ Cliente con ID {cliente_id} actualizado correctamente.")
+    print(f"✓ Cliente con nombre {cliente_nombre} actualizado correctamente.")
     
     return cursor.rowcount

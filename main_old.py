@@ -28,7 +28,7 @@ def main():
             borrar_clientes(cursor, "Cliente 8")
             conexion.commit()
             print("✓ Cambios guardados en la base de datos")
-            actualizar_clientes(cursor, 17, "Pedro pascal", 1098765432)
+            actualizar_clientes(cursor, cliente_nombre = "Cliente 3" ,  nueva_cedula = 123456799)
             conexion.commit()
             # for i in range(1, 20):
             #     insertar_cliente(cursor, f"Cliente {i}", 1000568730 + i, 3128798760 + i, f"cliente{i}@gmail.com")
